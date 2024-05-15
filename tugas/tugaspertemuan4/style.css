@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+#home {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.background {
+    background-image: url('img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    filter: blur(5px);
+    position: absolute;
+}
+
+.headline {
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+/* Card */
+.card__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card__img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    width: 200px;
+}
+
+.card__text {
+    background-color: rgba(209, 187, 158, .6);
+    margin:-50px auto;
+    margin-bottom:-50px;
+    width:300px;
+    padding: 50px 20px;
+    border-radius: 1rem;
+}
+
+.card__text p {
+    margin-top: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.icon__wrapper {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon__wrapper i {
+    padding: .5rem;
+    border-radius: .5rem;
+    background-color: #AF8260;
+    cursor: pointer;
+}
+
+/* Button */
+.btn {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn h4 {
+    background-color: #3E3232;
+    padding: 0.5rem;
+    border-radius: .5rem;
+}
