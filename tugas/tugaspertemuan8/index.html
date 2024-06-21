@@ -1,0 +1,66 @@
+<!-- 
+Copyright Rifqi Banu Safingi 2024
+
+Tugas Pertemuan 8 Kelas Industri Crocodic
+
+Kelas Web Backend Basic
+
+link: https://github.com/rifqi011/materibackendbasic/tree/main/tugas/tugaspertemuan8
+
+Nama: Rifqi Banu Safingi
+Asal: SMK Negeri 1 Purwokerto
+
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tebak-tebakkan</title>
+        <link rel="stylesheet" href="src/output.css" />
+    </head>
+    <body id="body" class="flex h-screen w-[100%] items-center justify-center bg-teal-400">
+        <button id="button" class="transform rounded-lg bg-indigo-500 p-3 font-sans text-2xl font-semibold text-sky-100 transition duration-500 hover:scale-110 hover:bg-indigo-600">TEKAN SAYA</button>
+
+        <div id="correct" class="grid hidden gap-y-4">
+            <img class="rounded-lg bg-slate-50 p-4" src="https://media.giphy.com/media/uzOSCSVYB4Vz2oO77M/giphy.gif?cid=790b7611yt35x2a7jt2a9ze9auxt3vu7fooj92kq4dgcnzz7&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="" />
+            <h2 class="text-center text-4xl font-semibold text-white">Jawaban Benar &#128516;</h2>
+        </div>
+
+        <script>
+            let body = document.getElementById("body")
+            let button = document.getElementById("button")
+            let benar = document.getElementById("correct")
+
+            // Daftar pertanyaan dan jawabannya
+            const questions = [
+                { question: "Hasil dari 7 * 7 = ?", answer: 49 },
+                { question: "Hasil dari 5 + 3 = ?", answer: 8 },
+                { question: "Hasil dari 12 / 4 = ?", answer: 3 },
+                { question: "Hasil dari 9 - 1 = ?", answer: 8 },
+                { question: "Hasil dari 8 * 8 = ?", answer: 64 },
+                { question: "Hasil dari 6 + 7 = ?", answer: 13 },
+                { question: "Hasil dari 15 / 3 = ?", answer: 5 },
+                { question: "Hasil dari 10 - 2 = ?", answer: 8 },
+                { question: "Hasil dari 9 * 3 = ?", answer: 27 },
+                { question: "Hasil dari 16 / 2 = ?", answer: 8 },
+            ]
+
+            // Pilih satu pertanyaan secara acak
+            const randomQuestion = questions[Math.floor(Math.random() * questions.length)]
+
+            button.addEventListener("click", () => {
+                let jawab = prompt(randomQuestion.question)
+
+                if (parseInt(jawab) === randomQuestion.answer) {
+                    body.classList.remove("bg-teal-400")
+                    body.classList.add("bg-indigo-500")
+                    button.classList.add("hidden")
+                    benar.classList.remove("hidden")
+                } else {
+                    alert("HASIL SALAH!")
+                }
+            })
+        </script>
+    </body>
+</html>

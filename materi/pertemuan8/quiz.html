@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz</title>
+	</head>
+	<body>
+		<button onclick="klik()" id="button">Klik saya</button>
+
+		<script>
+			function klik() {
+				const yakin = confirm("Anda yakin?")
+                const button = document.getElementById("button")
+                
+                if(yakin) {
+                    button.innerHTML = "TERIMAKASIH"
+                }
+			}
+		</script>
+	</body>
+</html>
