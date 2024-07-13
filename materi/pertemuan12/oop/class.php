@@ -1,29 +1,37 @@
 <?php
 // nama class
-class SuperHero {
+class SuperHero
+{
     // property/atribut
     var $nama;
     var $organisasi;
     var $kekuatan;
 
     // method
-    function setNama($nama) {
+    // function setNama($nama) {
+    //     $this->nama = $nama;
+    // }
+    // function setOrganisasi($organisasi) {
+    //     $this->organisasi = $organisasi;
+    // }
+    // function setKekuatan($kekuatan) {
+    //     $this->kekuatan = $kekuatan;
+    // }
+    function __construct($nama, $organisasi, $kekuatan)
+    {
         $this->nama = $nama;
-    }
-    function setOrganisasi($organisasi) {
         $this->organisasi = $organisasi;
-    }
-    function setKekuatan($kekuatan) {
         $this->kekuatan = $kekuatan;
     }
-    function display() {
-        return $this->nama." ".$this->organisasi." ".$this->kekuatan;
+    function display()
+    {
+        return $this->nama . " " . $this->organisasi . " " . $this->kekuatan;
     }
 }
 
-$ironMan = new SuperHero ();
-$ironMan->setNama("Iron Man");
-$ironMan->setOrganisasi("Avanger");
-$ironMan->setKekuatan("Duidnya banyak");
+$ironMan = new SuperHero("Iron Man", "Avanger", "Duidnya Banyak");
+// $ironMan->setNama("Iron Man");
+// $ironMan->setOrganisasi("Avanger");
+// $ironMan->setKekuatan("Duidnya banyak");
 
 echo $ironMan->display();
