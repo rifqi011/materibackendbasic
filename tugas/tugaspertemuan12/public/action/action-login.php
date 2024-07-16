@@ -31,8 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $login = new LoginProcess($nomor_hp, $password);
 
     if ($login->validate()) {
-        header('Location: ../index.php');
+        header('Location: ../index');
     } else {
-        header('Location: ../login.php');
+        header('Location: ../login');
     }
 }
+header('Location: ../index');
