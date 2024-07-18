@@ -18,8 +18,8 @@ if ($session) {
 </head>
 
 <body>
-    <section class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
-        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+    <section class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% relative">
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 relative">
             <div class="w-full bg-indigo-600 rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <h1 class="text-3xl font-bold text-white">
@@ -41,6 +41,9 @@ if ($session) {
                 </div>
             </div>
         </div>
+        <?php
+        include '_footer.php'
+        ?>
     </section>
 </body>
 
