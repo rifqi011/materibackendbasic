@@ -1,7 +1,7 @@
 <?php
-$host = 'localhost:3434';
+$host = 'localhost';
 $user = 'root';
-$pass = 'kebersamaan'; //password
+$pass = ''; //password
 $db = 'ki_tesdb_tugas'; //database 
 $connect = mysqli_connect("$host", "$user", "$pass", "$db");
 
